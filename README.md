@@ -80,4 +80,5 @@ String arquivo = "src/util/reports/fichaAcademia.jrxml";
 
 - Guilherme Guida Torres - @guilhermeguidat  
 - Pedro Correa De Sousa Quadros - @pedroquadros2005
-- Tiago Alves de Souza Lima - @tiagodslima  
+- Tiago Alves de Souza Lima - @tiagodslima
+- João César serwinks silva - @Jaozinn17  

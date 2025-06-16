@@ -4,6 +4,8 @@ Este é um sistema de gerenciamento para academias desenvolvido como projeto fin
 
 ---
 
+> Documentação do projeto [Documentacao_Projeto_Academia.pdf](Documentacao_Projeto_Academia.pdf).
+
 ## 📦 Funcionalidades Principais
 
 - Cadastro de alunos, instrutores, exercícios e equipamentos
@@ -75,6 +77,7 @@ String arquivo = "src/util/reports/fichaAcademia.jrxml";
 - Caso os relatórios não sejam gerados, revise os caminhos dos arquivos .jrxml e a estrutura do banco.
 
 ## 👨‍💻 Autor
+
 - Guilherme Guida Torres - @guilhermeguidat  
 - Pedro Correa De Sousa Quadros - @pedroquadros2005
 - Tiago Alves de Souza Lima - @tiagodslima  

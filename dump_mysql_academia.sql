@@ -1,5 +1,3 @@
-CREATE DATABASE  IF NOT EXISTS `academia_projeto` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
-USE `academia_projeto`;
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
 -- Host: localhost    Database: academia_projeto
@@ -29,7 +27,7 @@ CREATE TABLE `aluno` (
   `nome` text NOT NULL,
   `telefone` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +42,7 @@ CREATE TABLE `equipamento` (
   `nome` text NOT NULL,
   `tipo` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -61,8 +59,8 @@ CREATE TABLE `exercicio` (
   `id_equipamento` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_equipamento` (`id_equipamento`),
-  CONSTRAINT `exercicio_ibfk_1` FOREIGN KEY (`id_equipamento`) REFERENCES `equipamento` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `exercicio_ibfk_1` FOREIGN KEY (`id_equipamento`) REFERENCES `equipamento` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -74,15 +72,15 @@ DROP TABLE IF EXISTS `ficha`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `ficha` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `id_aluno` int NOT NULL,
+  `id_aluno` int DEFAULT NULL,
   `id_instrutor` int DEFAULT NULL,
   `objetivo` text,
   PRIMARY KEY (`id`),
   KEY `id_aluno` (`id_aluno`),
   KEY `id_instrutor` (`id_instrutor`),
-  CONSTRAINT `ficha_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id`),
-  CONSTRAINT `ficha_ibfk_2` FOREIGN KEY (`id_instrutor`) REFERENCES `instrutor` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=44 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  CONSTRAINT `ficha_ibfk_1` FOREIGN KEY (`id_aluno`) REFERENCES `aluno` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `ficha_ibfk_2` FOREIGN KEY (`id_instrutor`) REFERENCES `instrutor` (`id`) ON DELETE SET NULL
+) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,8 +99,8 @@ CREATE TABLE `ficha_exercicio` (
   `divisao` char(1) DEFAULT NULL,
   KEY `id_ficha` (`id_ficha`),
   KEY `id_exercicio` (`id_exercicio`),
-  CONSTRAINT `ficha_exercicio_ibfk_1` FOREIGN KEY (`id_ficha`) REFERENCES `ficha` (`id`),
-  CONSTRAINT `ficha_exercicio_ibfk_2` FOREIGN KEY (`id_exercicio`) REFERENCES `exercicio` (`id`)
+  CONSTRAINT `ficha_exercicio_ibfk_1` FOREIGN KEY (`id_ficha`) REFERENCES `ficha` (`id`) ON DELETE SET NULL,
+  CONSTRAINT `ficha_exercicio_ibfk_2` FOREIGN KEY (`id_exercicio`) REFERENCES `exercicio` (`id`) ON DELETE SET NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -118,16 +116,8 @@ CREATE TABLE `instrutor` (
   `nome` text NOT NULL,
   `telefone` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping events for database 'academia_projeto'
---
-
---
--- Dumping routines for database 'academia_projeto'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -138,4 +128,4 @@ CREATE TABLE `instrutor` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-06-16  1:55:03
+-- Dump completed on 2025-06-16 14:19:19

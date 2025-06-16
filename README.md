@@ -26,6 +26,25 @@ Este é um sistema de gerenciamento para academias desenvolvido como projeto fin
 
 ---
 
+## 📚 Bibliotecas Necessárias (JARs)  
+Como o projeto não utiliza Maven, todas as bibliotecas externas necessárias estão incluídas na pasta:
+
+```bash
+/libs
+```
+
+Você deve adicioná-las manualmente ao classpath do projeto na sua IDE (ex: NetBeans):
+
+- Clique com o botão direito em Libraries no NetBeans
+
+- Selecione Add JAR/Folder
+
+- Navegue até a pasta libs/ e selecione todos os arquivos .jar
+
+As bibliotecas incluem o driver JDBC do MySQL e os arquivos necessários para o JasperReports.
+
+---
+
 ## 🚀 Instruções de Execução
 
 ### 1. Clone o repositório

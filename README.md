@@ -82,3 +82,4 @@ String arquivo = "src/util/reports/fichaAcademia.jrxml";
 - Pedro Correa De Sousa Quadros - @pedroquadros2005
 - Tiago Alves de Souza Lima - @tiagodslima
 - João César serwinks silva - @Jaozinn17  
+- Gabriel Leal de Oliveira - @Gabrielleal29

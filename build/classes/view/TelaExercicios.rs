@@ -1,0 +1,13 @@
+src.view.TelaExercicios$4
+src.view.TelaExercicios$3
+src.view.TelaExercicios$6
+src.view.TelaExercicios$10
+src.view.TelaExercicios$5
+src.view.TelaExercicios$11
+src.view.TelaExercicios$2
+src.view.TelaExercicios$1
+src.view.TelaExercicios$8
+src.view.TelaExercicios$7
+src.view.TelaExercicios$9
+src.view.TelaExercicios
+src.view.TelaExercicios$12

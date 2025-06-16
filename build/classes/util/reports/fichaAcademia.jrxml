@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.18.1.final using JasperReports Library version 6.18.1-9d75d1969e774d4f179fb3be8401e98a0e6d1611  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="fichaAcademia" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a5c9b49-9dc5-422a-ac69-e92cf61ef530">
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="divisaoA" uuid="e6dae98e-102f-457e-aed7-199a732a57b6">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nome" class="java.lang.String"/>
+		<field name="repeticoes" class="java.lang.Integer"/>
+		<field name="series" class="java.lang.Integer"/>
+		<field name="divisao" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="divisaoB" uuid="1154e292-6082-4df9-86fc-867e6f754f5e">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nome" class="java.lang.String"/>
+		<field name="repeticoes" class="java.lang.Integer"/>
+		<field name="series" class="java.lang.Integer"/>
+		<field name="divisao" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="divisaoC" uuid="8cbadea8-f2b5-4ed5-b7c6-4ab4d7d69c4a">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nome" class="java.lang.String"/>
+		<field name="repeticoes" class="java.lang.Integer"/>
+		<field name="series" class="java.lang.Integer"/>
+		<field name="divisao" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="divisaoD" uuid="b06a1d9a-9f29-405f-b39f-47b35c3d432e">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nome" class="java.lang.String"/>
+		<field name="repeticoes" class="java.lang.Integer"/>
+		<field name="series" class="java.lang.Integer"/>
+		<field name="divisao" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="divisaoE" uuid="6e8ac14c-de0e-4f9b-801d-606ce46e6773">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="nome" class="java.lang.String"/>
+		<field name="repeticoes" class="java.lang.Integer"/>
+		<field name="series" class="java.lang.Integer"/>
+		<field name="divisao" class="java.lang.String"/>
+	</subDataset>
+	<parameter name="divisaoA" class="java.util.Collection"/>
+	<parameter name="divisaoB" class="java.util.Collection"/>
+	<parameter name="divisaoC" class="java.util.Collection"/>
+	<parameter name="divisaoD" class="java.util.Collection"/>
+	<parameter name="divisaoE" class="java.util.Collection"/>
+	<parameter name="nomeAluno" class="java.lang.String"/>
+	<parameter name="nomeInstrutor" class="java.lang.String"/>
+	<parameter name="objetivo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="800" height="66" backcolor="#000000" uuid="d8d9e644-3a32-491d-97cb-a277aff17133"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="370" height="66" uuid="27d8f6ee-f0a9-44f6-a160-1763c3b00f30"/>
+					<box topPadding="4" leftPadding="4" bottomPadding="4" rightPadding="4"/>
+					<textElement verticalAlignment="Bottom">
+						<font isBold="false"/>
+					</textElement>
+					<text><![CDATA[Ficha]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="500" y="40" width="280" height="20" forecolor="#FFFFFF" uuid="053e3ed8-3013-4ec9-8c03-c612d0dc5bc3"/>
+					<textElement textAlignment="Right">
+						<font fontName="Times New Roman" size="16" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{nomeAluno}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="70" width="800" height="32" forecolor="#000000" backcolor="#CC0000" uuid="b0c895f6-6dbd-477d-9858-9ad66af087e1"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="520" y="6" width="260" height="20" forecolor="#FFFFFF" uuid="a33fce3b-20c1-4696-873a-fe134d1e7d88"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Data da impressão: " + new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="18" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="190" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="797" height="18" uuid="34a2ae4b-4055-476b-8676-d499f6af510b"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="5" y="5" width="795" height="40" forecolor="#D0B48E" backcolor="#000000" uuid="48156843-c0f8-4e0c-af6f-9650d8b45c11"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="47e86090-4025-4cec-b1c9-2d47a83c8e95"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Instrutor: " + $P{nomeInstrutor}]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="19" width="197" height="20" forecolor="#FFFFFF" uuid="ce734cb9-c461-487f-af52-e2e25a9814c0"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Objetivo: " + $P{objetivo}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="0" y="60" width="160" height="101" uuid="fe344462-943a-4361-a639-de619193399c"/>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="74" isBold="true"/>
+				</textElement>
+				<text><![CDATA[A]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="60" width="160" height="101" uuid="267ae9bd-b6b8-4945-a766-78b9eca7528e"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="74" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="60" width="160" height="101" uuid="5a5079eb-4095-4fef-862c-0d2af0d58e18"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="74" isBold="true"/>
+				</textElement>
+				<text><![CDATA[C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="60" width="160" height="101" uuid="8c91711f-c6ef-4d7e-9423-1444e88ca38a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="74" isBold="true"/>
+				</textElement>
+				<text><![CDATA[D]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="640" y="60" width="160" height="101" uuid="ec4670cb-5302-4697-8c52-70067483c8cd"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font size="74" isBold="true"/>
+				</textElement>
+				<text><![CDATA[E]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="0" y="160" width="161" height="21" uuid="803256f1-ac77-466f-b2f4-f63e8be5659d"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoA" uuid="50a8d550-b4a7-4ecf-a708-46e0bd57c617">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{divisaoA})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161">
+						<textField>
+							<reportElement x="0" y="0" width="161" height="21" uuid="8ba5ba26-6ffe-4b2b-a31f-a39501e545e5"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome} != null && !$F{nome}.equals("") ? $F{nome} + ", " + $F{series} + "x" + $F{repeticoes} : ""]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="160" y="160" width="161" height="21" uuid="82bc38e9-6f50-434b-9995-d7b6cdfe0030"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoB" uuid="fa0aed1f-f3f7-4e17-b05d-8720cf379ceb">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{divisaoB})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161">
+						<textField>
+							<reportElement x="0" y="0" width="161" height="21" uuid="12dd4024-45d6-45ef-8696-d51301d85a11"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome} != null && !$F{nome}.equals("") ? $F{nome} + ", " + $F{series} + "x" + $F{repeticoes} : ""]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="320" y="160" width="161" height="21" uuid="e8b7e55b-98ce-4913-ba04-a3c3c32a8595"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoB" uuid="4f674698-5a50-4640-b3be-3c9354d5af20">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161"/>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="480" y="160" width="161" height="21" uuid="5dcfe291-802a-461a-a820-a6c7ad29ce94"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoD" uuid="9eb11ffa-63ac-4569-8c87-94106f09d8c0">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161"/>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="640" y="160" width="161" height="21" uuid="8193f761-4475-45a1-ac2d-5bd40d78c089"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoE" uuid="7c5b31c5-b683-42ba-b336-c07484abaf46">
+						<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161"/>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="320" y="160" width="161" height="21" uuid="07d522b7-e559-46a1-9685-b31f8ef778e6"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoC" uuid="256ecf3e-8ed2-4e69-8140-57d49a2a0d91">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{divisaoC})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161">
+						<textField>
+							<reportElement x="0" y="0" width="161" height="21" uuid="d9e34d32-da06-4832-8968-bfab9715ff5e"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome} != null && !$F{nome}.equals("") ? $F{nome} + ", " + $F{series} + "x" + $F{repeticoes} : ""]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="480" y="160" width="161" height="21" uuid="13c371a0-7eb4-45a8-8f0a-d8ec24f701e1"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoD" uuid="8e8e631d-9d0d-4e0c-b5a8-b8eb1bbb3a58">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{divisaoD})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161">
+						<textField>
+							<reportElement x="0" y="0" width="161" height="21" uuid="594efb31-ad99-4de8-80e1-8a9520d2a843"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome} != null && !$F{nome}.equals("") ? $F{nome} + ", " + $F{series} + "x" + $F{repeticoes} : ""]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+			<componentElement>
+				<reportElement x="640" y="160" width="161" height="21" uuid="b40a90f6-53a2-4082-8a70-87c53ffdde12"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+					<datasetRun subDataset="divisaoE" uuid="072c923e-db35-4a94-8855-2d68eaac397a">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{divisaoE})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="21" width="161">
+						<textField>
+							<reportElement x="0" y="0" width="161" height="21" uuid="f1368609-2da4-4bcd-94fb-b88a539de977"/>
+							<textElement textAlignment="Center" verticalAlignment="Middle">
+								<font size="10"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{nome} != null && !$F{nome}.equals("") ? $F{nome} + ", " + $F{series} + "x" + $F{repeticoes} : ""]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

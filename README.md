@@ -76,7 +76,7 @@ String arquivo = "src/util/reports/fichaAcademia.jrxml";
 
 - Caso os relatórios não sejam gerados, revise os caminhos dos arquivos .jrxml e a estrutura do banco.
 
-## 👨‍💻 Autor
+## 👨‍💻 Autores
 
 - Guilherme Guida Torres - @guilhermeguidat  
 - Pedro Correa De Sousa Quadros - @pedroquadros2005
